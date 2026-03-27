@@ -1,0 +1,63 @@
+{
+  "skill_name": "code-reviewer-9d",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Review this React component. I'm concerned about edge cases and security but not sure what I'm missing.",
+      "expected_output": "Comprehensive 9-dimension review identifying: XSS vulnerability (dangerouslySetInnerHTML), missing error handling, no loading state management, unvalidated email update, type safety issues (any types), no cleanup on unmount, duplicate helper functions that should be extracted, missing tests.",
+      "files": ["evals/files/UserProfile.tsx"],
+      "expectations": [
+        "Review includes dimension scores table with 9 rows",
+        "Identifies XSS vulnerability via dangerouslySetInnerHTML",
+        "Identifies missing error handling on fetch calls",
+        "Identifies broken loading state (never set to true)",
+        "Identifies type safety issues (any types)",
+        "Identifies API calls on every keystroke (missing debounce)",
+        "Identifies missing AbortController for cleanup",
+        "Includes overall score between 1-10",
+        "Includes top 3 critical issues with severity labels",
+        "Includes refactoring suggestion with code",
+        "Covers all 9 dimensions (Robustness, Edge Cases, Naming, Comments, Reuse, Colocation, Decomposition, Consistency, Tests)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "This Python script processes data files and saves results. Can you review it for code quality?",
+      "expected_output": "Review identifying: file handle leaks (no context manager), duplicated calculation logic across user types, magic numbers (1.5, 2.0, 3.0), poor variable names (x, y, z), no error handling, hardcoded config URL, no input validation, duplicate save_results calls, missing type hints, no tests.",
+      "files": ["evals/files/data_processor.py"],
+      "expectations": [
+        "Review includes dimension scores table with 9 rows",
+        "Identifies file handle leaks (missing context managers)",
+        "Identifies duplicated calculation logic (3 nearly identical blocks)",
+        "Identifies cryptic variable names (x, y, z, d)",
+        "Identifies magic numbers (1.5, 2.0, 3.0 etc.)",
+        "Identifies missing error handling",
+        "Identifies hardcoded URL",
+        "Identifies missing input validation",
+        "Includes overall score between 1-10",
+        "Includes top 3 critical issues with severity labels",
+        "Includes refactoring suggestion with code",
+        "Covers all 9 dimensions"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Review this Express.js API handler for user management. I want to make sure it's production-ready.",
+      "expected_output": "Review identifying: SQL injection vulnerabilities (string interpolation in queries), hardcoded credentials, missing input validation, no rate limiting, inconsistent error handling (empty catch block), missing auth middleware, no timeout configuration, missing request logging, no CORS configuration, missing tests.",
+      "files": ["evals/files/api_handler.ts"],
+      "expectations": [
+        "Review includes dimension scores table with 9 rows",
+        "Identifies SQL injection vulnerabilities (lines 23, 64)",
+        "Identifies hardcoded credentials (password, JWT secret)",
+        "Identifies missing authentication on PUT/DELETE endpoints",
+        "Identifies empty catch block (line 55-57)",
+        "Identifies missing input validation",
+        "Identifies inconsistent parameterized vs string concat queries",
+        "Includes overall score between 1-10",
+        "Includes top 3 critical issues with severity labels",
+        "Includes refactoring suggestion with code",
+        "Covers all 9 dimensions"
+      ]
+    }
+  ]
+}
