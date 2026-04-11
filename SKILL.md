@@ -1,13 +1,8 @@
 ---
 name: code-reviewer-9d
 description: >
-  Perform rigorous FAANG Staff+ level code reviews using a 9-dimension checklist. 
-  Use this skill whenever the user asks to review code, audit code quality, do a code review, 
-  check for issues, or wants feedback on code/PRs. This covers robustness, edge cases, naming, 
-  comments, reuse, colocation, decomposition, consistency, and tests. Produces a detailed report 
-  with per-dimension verdicts, an overall score, top-3 critical issues, and refactoring suggestions 
-  with code diffs. Trigger on: "review", "code review", "audit", "check this code", "feedback on PR", 
-  "is this code good", "what's wrong with", or any request to evaluate code quality.
+  Rigorous 9-dimension code review (FAANG Staff+ level). Covers robustness, edge cases, naming,
+  comments, reuse, colocation, decomposition, consistency, tests. Trigger: review, audit, feedback on code/PR.
 ---
 
 # 9-Dimension Code Reviewer (FAANG Staff+)
